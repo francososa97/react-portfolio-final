@@ -5,7 +5,6 @@ import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
-import { YinYang } from './AllSvgs'
 import Intro from './Intro'
 ;
 
@@ -128,9 +127,8 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 
 const Main = () => {
 
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(true);
 
-    const handleClick = () => setClick(!click);
 
     return (
         <MainContainer>
@@ -140,12 +138,7 @@ const Main = () => {
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
            
-            <Center click={click}>
-                <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
-            </Center>
-
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto:fs.franco.sosa@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
