@@ -50,7 +50,7 @@ const Main =  styled.div`
   
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 10rem;
+  top: 15rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 `
@@ -65,21 +65,16 @@ const AboutPage = () => {
 
 <LogoComponent theme='dark'/>
 <SocialIcons theme='dark'/>
-<PowerButton />
 <ParticleComponent theme='dark' />
 
         <Spaceman>
             <img src={astronaut} alt="spaceman" />
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+        I'm a Software Engineer based in Buenos Aires with over 10 years of experience in developing scalable and high-performance applications. Specializing in both frontend and backend development, I focus on crafting seamless user experiences and integrating complex systems with modern technologies. Passionate about continuous learning and innovation, I thrive on solving technical challenges, optimizing performance, and building solutions that make an impact.
         </Main>
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
+        <BigTitle text="ABOUT" top="5%" left="5%" />
 
 
         </Box>

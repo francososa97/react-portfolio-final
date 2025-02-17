@@ -23,7 +23,7 @@ const Box = styled.div`
 
 const Main = styled(motion.ul)`
   position: fixed;
-  top: 12rem;
+  top: 18rem;
   left: calc(10rem + 15vw);
   height: 40vh;
   display: flex;
@@ -78,7 +78,6 @@ const WorkPage = () => {
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
-        <PowerButton />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Work.map((d) => (
@@ -86,7 +85,6 @@ const WorkPage = () => {
           ))}
         </Main>
         <Rotate ref={yinyang}>
-          <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
         <BigTitlte text="WORK" top="10%" right="20%" />

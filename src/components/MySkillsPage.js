@@ -89,7 +89,6 @@ const MySkillsPage = () => {
 
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
-<PowerButton />
 <ParticleComponent theme='light' />
             <Main>
 <Title>

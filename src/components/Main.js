@@ -6,7 +6,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import Intro from './Intro'
-;
+import cv from '../assets/cv/cv.pdf';
 
 
 const MainContainer = styled.div`
@@ -35,7 +35,7 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
-const BLOG = styled(NavLink)`
+const Resume = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
 top: 50%;
@@ -126,15 +126,11 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 
 
 const Main = () => {
-
     const [click, setClick] = useState(true);
-
-
     return (
         <MainContainer>
          <DarkDiv   click={click}/>
             <Container>
-            <PowerButton />
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
            
@@ -155,7 +151,7 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
-            <BLOG to="/blog">
+            <Resume to="/Resume">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -168,9 +164,9 @@ const Main = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Blog
+                    Resume
                 </motion.h2>
-            </BLOG>
+            </Resume>
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
