@@ -72,7 +72,6 @@ const MySkillsPage = () => {
                         <SkillIcons>
                             <FaPython />
                             C#
-                            <FaPhp />
                             <FaNodeJs />
                             <FaJava />
                             <SiGo />
