@@ -1,152 +1,163 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes';
-import { Design, Develope} from './AllSvgs';
-
-
-import LogoComponent from '../subComponents/LogoComponent';
-import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
+import { lightTheme } from './Themes'
+import LogoComponent from '../subComponents/LogoComponent'
+import SocialIcons from '../subComponents/SocialIcons'
+import ParticleComponent from '../subComponents/ParticleComponent'
 import BigTitle from '../subComponents/BigTitlte'
+import { FaPython, FaNodeJs, FaPhp, FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaGitAlt, FaGithub, FaJava } from 'react-icons/fa'
+import { FaAws } from "react-icons/fa";
+import { DiVisualstudio } from "react-icons/di";
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { VscAzure } from "react-icons/vsc"
+import { SiAmazondynamodb } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import { SiFigma, SiSketch, SiRedis, SiPostgresql, SiOracle, SiGooglecloud, SiMongodb, SiReact, SiAngular, SiVuedotjs, SiGo, SiRust, SiBlazor, SiFlutter, SiKotlin, SiScala, SiAndroid, SiIos, SiDocker, SiKubernetes, SiRedhat } from 'react-icons/si'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
 width: 100vw;
-height:100vh;
+height: 100vh;
 position: relative;
 display: flex;
-justify-content: space-evenly;
-align-items: center;
-
-
-`
-
-const Main = styled.div`
-border: 2px solid ${props => props.theme.text};
-color: ${props => props.theme.text};
-background-color: ${props => props.theme.body};
-padding: 2rem;
-width: 30vw;
-height: 60vh;
-z-index:3;
-line-height: 1.5;
-cursor: pointer;
-
-font-family: 'Ubuntu Mono',monospace;
-display: flex;
 flex-direction: column;
-justify-content: space-between;
-
-&:hover{
-    color: ${props => props.theme.body};
-    background-color: ${props => props.theme.text};
-}
-`
-
-const Title = styled.h2`
-display: flex;
 justify-content: center;
 align-items: center;
-font-size: calc(1em + 1vw);
-
-${Main}:hover &{
-    &>*{
-        fill:${props => props.theme.body};
-    }
-}
-
-&>*:first-child{
-margin-right: 1rem;
-}
+overflow: hidden;
 `
 
-const Description = styled.div`
+const SkillsContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+gap: 3rem;
+align-items: flex-start;
+justify-content: center;
+margin-top: 3rem;
+`
+
+const SkillCategory = styled.div`
+background: rgba(255, 255, 255, 0.1);
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+text-align: center;
+width: 280px;
+`
+const SkillTitle = styled.h3`
 color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
-padding: 0.5rem 0;
-
-
-${Main}:hover &{
-   
-        color:${props => props.theme.body};
-    
-}
-
-strong{
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-ul,p{
-    margin-left: 2rem;
-}
+margin-bottom: 1rem;
+font-size: 1.5rem;
 `
-
+const SkillIcons = styled.div`
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+align-items: center;
+font-size: 2.5rem;
+color: ${props => props.theme.text};
+`
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-<Box>
+            <Box>
+                <LogoComponent theme='light' />
+                <SocialIcons theme='light' />
+                <ParticleComponent theme='light' />
+                <BigTitle text="Skills" top="5%" left="40%" />
 
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<ParticleComponent theme='light' />
-            <Main>
-<Title>
-    <Design width={40} height={40} /> Designer
-</Title>
-<Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
-</Description>
-<Description>
-<strong>I like to Design</strong>
-<ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
-</Description>
+                <SkillsContainer>
+                    <SkillCategory>
+                        <SkillTitle>Back-end</SkillTitle>
+                        <SkillIcons>
+                            <FaPython />
+                            C#
+                            <FaPhp />
+                            <FaNodeJs />
+                            <FaJava />
+                            <SiGo />
+                            <SiRust />
+                        </SkillIcons>
+                    </SkillCategory>
+                    
+                    <SkillCategory>
+                        <SkillTitle>Front-end</SkillTitle>
+                        <SkillIcons>
+                            <FaHtml5 />
+                            <FaCss3Alt />
+                            <FaJs />
+                            <FaBootstrap />
+                            <SiReact />
+                            <SiAngular />
+                            <SiVuedotjs />
+                            <SiBlazor />
+                        </SkillIcons>
+                    </SkillCategory>
 
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Frontend Developer
-</Title>
-<Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
+                    <SkillCategory>
+                        <SkillTitle>Mobile Applications</SkillTitle>
+                        <SkillIcons>
+                            <TbBrandReactNative/>
+                            <SiAndroid />
+                            <SiIos />
+                            <SiKotlin />
+                            <SiScala />
+                            <SiFlutter />
+                        </SkillIcons>
+                    </SkillCategory>
 
-            </Main>
+                    <SkillCategory>
+                        <SkillTitle>Tools</SkillTitle>
+                        <SkillIcons>
+                            <DiVisualstudio />
+                            <BiLogoVisualStudio/>
+                            <FaGitAlt />
+                            <FaGithub />
+                        </SkillIcons>
+                    </SkillCategory>
 
-            <BigTitle text="SKILLS" top="80%" right="30%" />
+                    <SkillCategory>
+                        <SkillTitle>UI/UX</SkillTitle>
+                        <SkillIcons>
+                            <SiFigma />
+                            <SiSketch />
+                        </SkillIcons>
+                    </SkillCategory>
 
-        </Box>
+                    <SkillCategory>
+                        <SkillTitle>Databases</SkillTitle>
+                        <SkillIcons>
+                            <SiRedis />
+                            <SiAmazondynamodb/>
+                            <SiPostgresql />
+                            <SiOracle />
+                            <SiGooglecloud />
+                            <SiMongodb />
+                        </SkillIcons>
+                    </SkillCategory>
 
+                    <SkillCategory>
+                        <SkillTitle>Cloud</SkillTitle>
+                        <SkillIcons>
+                            <FaAws/>
+                            <VscAzure/>
+                            <SiGooglecloud />
+                        </SkillIcons>
+                    </SkillCategory>
+
+                    <SkillCategory>
+                        <SkillTitle>Infrastructure</SkillTitle>
+                        <SkillIcons>
+                            <SiDocker />
+                            <SiKubernetes />
+                            <SiRedhat />
+                            <FaAws/>
+                            <VscAzure/>
+                        </SkillIcons>
+                    </SkillCategory>
+                </SkillsContainer>
+            </Box>
         </ThemeProvider>
-        
     )
 }
 
